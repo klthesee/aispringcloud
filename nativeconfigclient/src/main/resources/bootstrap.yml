@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev #根据当前应用名-当前项，去匹配configserver中的配置文件：configclient-dev.yml
+  cloud:
+    config:
+      uri: http://localhost:8762 #configserver的访问路径
+      fail-fast: true
